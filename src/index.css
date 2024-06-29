@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.scrollerContainerStyle {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.scrollerItemStyle {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
 }
+
+.image{
+    cursor: pointer;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.image:hover{
+    transform: scale(1.02);
+    transition: .2s ease;
+    opacity: 0.9;
+}
+
+.card{
+    border-style: none;
+}
+
+.card-body{
+    padding:0;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.card-title {
+    white-space: wrap;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to  right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Black with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white; /* Set text color to white for better visibility */
+}
+
+/* .big{
+    position: relative;
+    background-image: url('https://people.com/thmb/x9pwfXmXMLFQ-1IFDjtzscUlGoo=/1024x256/filters:no_upscale():max_bytes(150000):strip_icc()/movies2-eb998e3268a44ddcac1d640c13b56fb8.png');
+    background-size: cover;
+} */
+
+.z1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background:  hwb(197 1% 77% / 0.7);
+    pointer-events: none;
+}
+
+.z2{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+li{
+    cursor: pointer;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
